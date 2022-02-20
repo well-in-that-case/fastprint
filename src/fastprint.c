@@ -45,7 +45,6 @@ inline void concatenate(char* dest, const char* src) {
     while (*dest++ = *src++);
 }
 
-// Miles faster than the native Lua print function. Upwards of 24x faster.
 static int print(lua_State *L) {
     char *s = malloc(BUFFER_SIZE + 1); s[0] = '\0';
 
